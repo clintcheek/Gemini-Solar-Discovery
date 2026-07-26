@@ -1,0 +1,9 @@
+SolarDiscovery Build 0005
+
+- Uses direct Dallas recorder result URLs with exact recordedDateRange parameters.
+- Splits the trailing ten years into newest-first yearly partitions to avoid broad 10,000-result searches.
+- Preserves a global 5,000 unique-filing development cap.
+- Adds resumable partition, search-term, and page checkpoints.
+- Uses a separate Build 0005 database and raw-page directory.
+- Creates an Excel workbook with Run Summary, Acquisition Inventory, Qualified Solar, and Review Queue sheets.
+- Verifies that the workbook exists and is non-empty after export.

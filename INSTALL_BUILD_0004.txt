@@ -1,0 +1,27 @@
+SOLAR DISCOVERY BUILD 0004 - DALLAS RECENT UCC/PACE TEST
+========================================================
+
+Implemented limits:
+- Recording dates restricted to the trailing 10 years.
+- Portal date controls are filled before search when available.
+- Local date enforcement discards older records even if the portal ignores the filter.
+- Pagination stops when an entire readable result page is older than the cutoff.
+- Maximum 5,000 unique recent filings in development mode.
+- Build 0004 uses data\solar_discovery_v4.db.
+- Build 0004 raw pages use data\raw\dallas_10_year.
+- Build 0003 historical data is not imported or exported.
+
+INSTALL
+-------
+1. Stop Build 0003 with Ctrl+C.
+2. Extract this ZIP.
+3. Copy solar_discovery, tests, RUN_DALLAS.bat, and INSTALL_BUILD_0004.txt into the SolarDiscovery project folder.
+4. Choose Replace files in destination.
+5. In PowerShell run: .\RUN_DALLAS.bat
+6. Choose option 6.
+
+OPTIONAL ENVIRONMENT OVERRIDES
+------------------------------
+$env:SOLAR_DISCOVERY_MAX_RECORDS="5000"
+$env:SOLAR_DISCOVERY_LOOKBACK_YEARS="10"
+$env:SOLAR_DISCOVERY_MAX_PAGES="10000"

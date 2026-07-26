@@ -1,0 +1,15 @@
+SolarDiscovery Build 0003 - Dallas UCC/PACE Bulk Acquisition
+
+1. Copy solar_discovery and RUN_DALLAS.bat into the SolarDiscovery project folder.
+2. Replace existing files when Windows asks.
+3. Preserve config, data, logs, and output folders.
+4. Run in PowerShell: .\RUN_DALLAS.bat
+5. Choose 5 for acquire -> parse -> export.
+
+Raw pages: data\raw\dallas
+Workbooks: output
+Logs: logs
+
+Optional maximum-page override:
+$env:SOLAR_DISCOVERY_MAX_PAGES="25000"
+.\RUN_DALLAS.bat
